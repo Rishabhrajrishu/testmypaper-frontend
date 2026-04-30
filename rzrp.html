@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Razorpay Payment Form</title>
+</head>
+<body>
+
+  <h2>Make Payment</h2>
+
+  <form id="paymentForm">
+    <label>Name:</label><br>
+    <input type="text" id="name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" required><br><br>
+
+    <label>Phone:</label><br>
+    <input type="tel" id="phone" required><br><br>
+
+    <label>Amount (₹):</label><br>
+    <input type="number" id="amount" required><br><br>
+
+    <button type="submit">Pay Now</button>
+  </form>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script>
+    document.getElementById("paymentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var amount = document.getElementById("amount").value * 100; // convert to paise
+
+      var options = {
+        key: "rzp_live_SjdKByvSIjsGBX",
+        amount: amount,
+        currency: "INR",
+        name: "TestMyPaper",
+        description: "Payment",
+        handler: function (response) {
+          alert("Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
+          console.log(response);
+        },
+        prefill: {
+          name: name,
+          email: email,
+          contact: phone
+        },
+        theme: {
+          color: "#3399cc"
+        }
+      };
+
+      var rzp = new Razorpay(options);
+      rzp.open();
+    });
+  </script>
+
+</body>
+</html>
