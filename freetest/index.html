@@ -117,8 +117,9 @@
       text-decoration: none;
     }
     .free-card-wrap {
-      display: flex;
-      justify-content: center;
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .mock-card {
       background: var(--free-surface);
@@ -126,7 +127,6 @@
       border-radius: 28px;
       box-shadow: 0 18px 44px rgba(16, 12, 13, 0.22);
       padding: 24px 20px 20px;
-      max-width: 420px;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -292,6 +292,9 @@
         padding-right: 0;
         margin-bottom: 40px;
       }
+      .free-card-wrap {
+        grid-template-columns: 1fr;
+      }
       .free-copy__title {
         font-size: 42px;
       }
@@ -432,6 +435,70 @@
                 </div>
                 <div class="mock-card__offer">100% Off</div>
                 <a href="https://app.testmypaper.com/student/go-to-test-series.html?seriesId=14" class="mock-card__button">Start Test</a>
+              </div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card__top">
+                <div class="mock-card__logo"><img src="https://testmypaper.com/images/cil.png" alt="Coal India logo"></div>
+                <div class="mock-card__tag">Engineering</div>
+              </div>
+              <h3 class="mock-card__title">Coal India MT Civil Technical (15 Tests)</h3>
+              <p class="mock-card__subtitle">Coal India MT Civil Technical | English</p>
+              <div class="mock-card__meta">
+                <div class="mock-card__meta-box">
+                  <span class="mock-card__meta-label">Tests</span>
+                  <div class="mock-card__meta-value">15 Total</div>
+                </div>
+                <div class="mock-card__meta-box">
+                  <span class="mock-card__meta-label">Duration</span>
+                  <div class="mock-card__meta-value">90 Min</div>
+                </div>
+              </div>
+              <ul class="mock-card__features">
+                <li>1500 Questions</li>
+                <li>Previous Year Weightage</li>
+                <li>Detailed Solution</li>
+                <li>Unlimited Attempts</li>
+              </ul>
+              <div class="mock-card__pricing">
+                <div class="mock-card__price-row">
+                  <div class="mock-card__price">&#8377;199</div>
+                  <div class="mock-card__old-price">&#8377;400</div>
+                </div>
+                <div class="mock-card__offer">50% Off</div>
+                <a href="https://app.testmypaper.com/landing-page/payment.html?bundleId=10" class="mock-card__button">Pay Now</a>
+              </div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card__top">
+                <div class="mock-card__logo"><img src="https://testmypaper.com/images/cil.png" alt="Coal India logo"></div>
+                <div class="mock-card__tag">Engineering</div>
+              </div>
+              <h3 class="mock-card__title">Coal India MT Civil Technical (10 Tests)</h3>
+              <p class="mock-card__subtitle">Coal India MT Civil Technical | English</p>
+              <div class="mock-card__meta">
+                <div class="mock-card__meta-box">
+                  <span class="mock-card__meta-label">Tests</span>
+                  <div class="mock-card__meta-value">10 Total</div>
+                </div>
+                <div class="mock-card__meta-box">
+                  <span class="mock-card__meta-label">Duration</span>
+                  <div class="mock-card__meta-value">90 Min</div>
+                </div>
+              </div>
+              <ul class="mock-card__features">
+                <li>1000 Questions</li>
+                <li>Previous Year Weightage</li>
+                <li>Detailed Solution</li>
+                <li>Unlimited Attempts</li>
+              </ul>
+              <div class="mock-card__pricing">
+                <div class="mock-card__price-row">
+                  <div class="mock-card__price">&#8377;149</div>
+                  <div class="mock-card__old-price">&#8377;300</div>
+                </div>
+                <div class="mock-card__offer">50% Off</div>
+                <button type="button" class="mock-card__button">Pay Now</button>
               </div>
             </div>
           </div>
