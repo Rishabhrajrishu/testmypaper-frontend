@@ -26,30 +26,16 @@
       --free-soft: #f1ebea;
     }
     body {
-      background:
-        radial-gradient(circle at top right, rgba(132, 27, 88, 0.55), transparent 34%),
-        linear-gradient(180deg, #080808 0%, #111 42%, #faf6f3 42%, #faf6f3 100%);
+      background: #faf6f3;
     }
-    .free-hero {
-      min-height: 100vh;
-      padding: 110px 0 80px;
+    .free-intro {
+      background: #0b0b0c;
+      border-radius: 34px;
+      margin-top: -140px;
+      padding: 44px 38px;
       position: relative;
-      overflow: hidden;
-    }
-    .free-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(130deg, rgba(0, 0, 0, 0.86) 12%, rgba(73, 17, 57, 0.58) 68%, rgba(119, 30, 80, 0.18) 100%);
-      z-index: 0;
-    }
-    .free-hero .container {
-      position: relative;
-      z-index: 1;
-    }
-    .free-hero__grid {
-      align-items: center;
-      min-height: calc(100vh - 190px);
+      z-index: 3;
+      box-shadow: 0 24px 60px rgba(17, 11, 14, 0.28);
     }
     .free-copy {
       color: #fff;
@@ -311,6 +297,10 @@
       }
     }
     @media (max-width: 991.98px) {
+      .free-intro {
+        margin-top: -90px;
+        padding: 32px 24px;
+      }
       .free-copy {
         padding-right: 0;
         margin-bottom: 40px;
@@ -330,8 +320,10 @@
       }
     }
     @media (max-width: 575.98px) {
-      .free-hero {
-        padding: 80px 0 50px;
+      .free-intro {
+        border-radius: 24px;
+        margin-top: -70px;
+        padding: 26px 18px;
       }
       .free-copy__eyebrow {
         font-size: 12px;
@@ -445,10 +437,11 @@
       </div>
     </div>
   </nav>
-  <section class="free-hero">
+  <div class="hero-wrap js-fullheight" style="background-image: url('../images/bg.jpg');">
+    <div class="overlay"></div>
     <div class="container">
-      <div class="row free-hero__grid">
-        <div class="col-lg-5">
+      <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+        <div class="col-md-7 ftco-animate">
           <div class="free-copy">
             <span class="free-copy__eyebrow">Test My Paper Free Access</span>
             <h1 class="free-copy__title">Start Your <span>Free Test</span> Before You Buy Any Bundle</h1>
@@ -462,7 +455,28 @@
             <a href="https://app.testmypaper.com/student/go-to-test-series.html?seriesId=14" class="free-cta">Start Free Test</a>
           </div>
         </div>
-        <div class="col-lg-7">
+      </div>
+    </div>
+  </div>
+
+  <section class="ftco-section bg-light">
+    <div class="container">
+      <div class="free-intro">
+        <div class="row align-items-start">
+          <div class="col-lg-5">
+            <div class="free-copy">
+              <span class="free-copy__eyebrow">Free Test Landing Page</span>
+              <h2 class="free-copy__title">Practice The Real Interface Before Choosing Your Bundle</h2>
+              <p class="free-copy__text">Use the free test to understand the exam flow, check your speed, and then move into the full Coal India MT Civil Technical test bundles from the same platform.</p>
+              <ul class="free-points">
+                <li>Free starter test for quick evaluation</li>
+                <li>Paid bundles for 5, 10, and 15 test preparation</li>
+                <li>Detailed solutions and repeat attempts</li>
+                <li>Same flow as the live platform experience</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-7">
           <div class="free-card-wrap">
             <div class="mock-card mock-card--featured">
               <div class="mock-card__top">
